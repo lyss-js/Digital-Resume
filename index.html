@@ -73,10 +73,8 @@
 
 
 
-  <div class="container-fluid p-0 wrapper">
-      <a href="#page-1" class="scrollitem selected">page 1</a>
-      <a href="#page-2" class="scrollitem">page 2</a>
-      <a href="#page-3" class="scrollitem">page 3</a>
+  <div class="container-fluid p-0">
+
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" >
       <div class="w-100">
         <h1 class="mb-0 home-animation">Alyssa
@@ -105,6 +103,7 @@
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="about">
         <div class="w-100">
           <h2 class="mb-5 experience">About</h2>
+  
   
         </div>
   
@@ -353,7 +352,7 @@
 });
   </script>
 
-<!-- Horizontal Transition -->
+<!-- Horizontal Transition-->
   <script>
   $(document).ready(function() {
   var slideNum = $('.page').length,
@@ -362,8 +361,8 @@
   $('.wrapper').width(wrapperWidth + '%');
   $('.page').width(slideWidth + '%');
 
-  $('.scrollitem').click(function() {
-    $('.scrollitem').removeClass('selected');
+  $('a.scrollitem').click(function() {
+    $('a.scrollitem').removeClass('selected');
     $(this).addClass('selected');
 
     var slideNumber = $($(this).attr('href')).index('.page'),
